@@ -1,0 +1,10 @@
+## Interface: 100002
+## Title: Quick Delete
+## Notes: Quickly delete items with zero typing
+## Author: Tyyrenn-Zul'jin (US)
+## X-Curse-Project-ID: 784719
+## X-Wago-ID: WYK9yVKL
+## OptionalDeps:
+## Dependencies:
+## SavedVariables:
+quickdelete.lua
