@@ -1,4 +1,4 @@
-## Interface: 100002
+## Interface: 100005
 ## Title: Quick Delete
 ## Notes: Quickly delete items with zero typing
 ## Author: Tyyrenn-Zul'jin (US)
