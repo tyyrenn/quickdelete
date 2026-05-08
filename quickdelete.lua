@@ -1,8 +1,8 @@
 local link;
 
-hooksecurefunc(StaticPopupDialogs['DELETE_GOOD_ITEM'], 'OnShow', function (s)
-  local edit = s.editBox
-  local btn = s.button1
+local function QuickDelete_OnShow(s)
+  local edit = s.EditBox
+  local btn = s.visibleButtons[1]
 
   if not link then
     link = s:CreateFontString(nil, 'ARTWORK', 'GameFontHighlight')
@@ -16,4 +16,13 @@ hooksecurefunc(StaticPopupDialogs['DELETE_GOOD_ITEM'], 'OnShow', function (s)
     link:Show()
     btn:Enable()
   end
-end)
+end
+
+local dlg = StaticPopupDialogs['DELETE_GOOD_ITEM']
+if dlg then
+  local orig = dlg.OnShow
+  dlg.OnShow = function(self, ...)
+    if orig then orig(self, ...) end
+    QuickDelete_OnShow(self, ...)
+  end
+end
